@@ -20,6 +20,18 @@ a {
 
 img {
     display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .section {
@@ -71,7 +83,7 @@ margin-right: 76px;
     gap: 40px;
 }
 
-.header-menu-link {
+.link {
 font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
@@ -80,9 +92,34 @@ padding: 24px;
 display: block;
 padding: 24px 0
 }
+.current {
+position: relative;
+color: #404bbf;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding: 24px;
+display: block;
+padding: 24px ;
 
-.header-menu-link:hover, 
-.header-menu-link:focus {
+}
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    background-color: #404bbf;
+
+}
+
+
+.link:hover, 
+.link:focus {
     color: #404bbf;
 }
 
@@ -114,13 +151,19 @@ color:#434455;
 .hero {
     background-color:  #2e2f42;
     padding-bottom: 188px;
-padding-top: 188px;
+    padding-top: 188px;
+    margin: 0 auto;
+    text-align: center;
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .hero-container {
-    text-align: center;
-}
 
+}
 .hero-title {
 font-weight: 700;
 font-size: 56px;
@@ -167,6 +210,13 @@ cursor: pointer
 .quality-container {
 }
 
+
+
+.quality-icons-img {
+
+
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -178,7 +228,7 @@ cursor: pointer
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 .quality-list {
     display: flex;
     gap: 24px;
@@ -186,6 +236,17 @@ cursor: pointer
 
 .quality-item {
     width: calc((100% - 3 * 24px) / 4);
+}
+.quality-icons {
+    border: 1px solid #8e8f99;
+border-radius: 4px;
+background: #f4f4fd;
+width: 264px;
+height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
 .quality-subtitle {
@@ -211,7 +272,6 @@ letter-spacing: 0.02em;
 
 .team {
 background: #f4f4fd;
-display: flex;
 padding-top: 120px;
 padding-bottom: 120px;
 }
@@ -230,7 +290,7 @@ margin-bottom: 72px;
 .team-list {
     display: flex;
     gap: 24px;
-    text-align: center;
+    
     
 }
 
@@ -239,16 +299,10 @@ margin-bottom: 72px;
     background-color: #ffffff;
     width: calc((100% - 3 * 24px) / 4);
     border-radius: 0 0 4px 4px;
-    padding-top: 0;
-    padding-bottom: 32px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     
 }
-.team-img {
-    margin: 0 auto;
-    margin-bottom: 32px;
 
-}
 .team-title-container {
     padding: 32px 0;
 }
@@ -266,17 +320,44 @@ margin-bottom: 8px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 text-align: center;
+margin-bottom: 8px;
 }
+.team-icons-list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+.team-icons-item {
+    width: 40px;
+    height: 40px;
+}
+.team-icons-link {
+    width: 100%;
+    height: 100%;
+    background-color:#4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-icons-link:hover {
+    background-color: #404bbf;
+}
+.team-icons-img {
+    fill: #f4f4fd;
+
+}
+
+
 
 
 /* --------------OUR PORTFOLIO------------- */
 
 
 .portfolio {
-display: flex;
 padding-top: 120px;
 padding-bottom: 120px;
-text-align: center;
 }
 .portfolio-container {
     
@@ -302,6 +383,10 @@ margin-bottom: 72px;
 }
 .portfolio-item {
 width: calc((100% - 48px) / 3);
+}
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+
 }
 .portfolio-img {
     display: block;
@@ -332,12 +417,13 @@ letter-spacing: 0.02em;
 
 .footer {
     background: #2e2f42;
-    width: 1440px;
-height: 312px;
-padding: 100px 0;
+
 }
 .footer-container {
-    
+display: flex;
+}
+.footer-logo-container{
+    padding: 100px 0;
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -362,6 +448,43 @@ letter-spacing: 0.02em;
 color: #f4f4fd;
 width: 264px;
 height: 72 px;
+}
+.footer-icons-container {
+    padding-top: 100px;
+    padding-bottom: 132px;
+    margin-left: 120px;
+}
+.footer-icons-title {
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin-bottom: 16px;
+justify-content: left;
+
+}
+.footer-icons-list {
+    display: flex;
+    gap: 16px;
+}
+.footer-icons-item {
+    width: 40px;
+    height: 40px;
+}
+.footer-icons-link {
+    width: 100%;
+    height: 100%;
+    background-color:#4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-icons-link:hover {
+    background-color: #31d0aa;
+}
+.footer-icons-img {
+    fill: #f4f4fd;
 }
 
 
