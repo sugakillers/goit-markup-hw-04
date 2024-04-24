@@ -49,6 +49,7 @@ p {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 
@@ -87,6 +88,7 @@ margin-right: 76px;
 font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
+transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 color: #2e2f42;
 padding: 24px;
 display: block;
@@ -136,6 +138,7 @@ padding: 24px ;
 .header-ads-link {
 line-height: 1.5;
 letter-spacing: 0.02em;
+transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 color:#434455; 
 }
 
@@ -158,6 +161,7 @@ color:#434455;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1440px;
 
 }
 
@@ -180,6 +184,7 @@ line-height: 1.5;
 letter-spacing: 0.04em;
 color: #fff;
 background-color: #4d5ae5;
+transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 border: none;
 min-width: 169px;
 border-radius: 4px;
@@ -335,13 +340,15 @@ margin-bottom: 8px;
 .team-icons-link {
     width: 100%;
     height: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:#4d5ae5;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.team-icons-link:hover {
+.team-icons-link:hover .team-icons-link:focus
+{
     background-color: #404bbf;
 }
 .team-icons-img {
@@ -379,14 +386,20 @@ margin-bottom: 72px;
     gap: 48px 24px;
     padding-left: 0;
     margin: 0;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .portfolio-item {
 width: calc((100% - 48px) / 3);
 }
 .portfolio-item:hover {
+    transform: translateY(0%);
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 
+.portfolio-img-container {
+    position: relative;
+    overflow: hidden;
+}
 }
 .portfolio-img {
     display: block;
@@ -421,9 +434,12 @@ letter-spacing: 0.02em;
 }
 .footer-container {
 display: flex;
+align-items: baseline,
+
 }
 .footer-logo-container{
     padding: 100px 0;
+    margin-right: 120px ;
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -479,8 +495,10 @@ justify-content: left;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icons-link:hover {
+.footer-icons-link:hover .footer-icons-link:focus
+{
     background-color: #31d0aa;
 }
 .footer-icons-img {
